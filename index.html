@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <i class="fas fa-cloud-sun"></i>
+                Weather Forecast
+            </h1>
+        </header>
+
+        <main class="main-content">
+            <div class="search-section">
+                <div class="search-container">
+                    <input type="text" id="cityInput" class="search-input" placeholder="Enter city name (e.g., London, New York, Tokyo)">
+                    <button id="searchBtn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button id="locationBtn" class="location-btn" title="Get current location">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="weather-container" id="weatherContainer">
+                <div class="welcome-message">
+                    <i class="fas fa-cloud-sun-rain"></i>
+                    <h2>Welcome to Weather Forecast</h2>
+                    <p>Search for a city or use your current location to get weather information</p>
+                </div>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <div class="error" id="error">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Oops! Something went wrong</h3>
+                <p id="errorMessage">Unable to fetch weather data</p>
+                <button id="retryBtn" class="retry-btn">Try Again</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Weather App</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
